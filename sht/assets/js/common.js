@@ -20,12 +20,13 @@ $(document).ready(function(){
 	// 让下拉菜单鼠标hover时打开
 	$('.dropdown-toggle').bootstrapDropdownHover();
 
-	// checkbox
-	$(".checkbox").click(function(){
-    	$(this).toggleClass("checked");
+	// checked-all
+	$(".table th .icheckbox :checkbox").click(function(){
+		if(this.checked){ 
+       		$(this).parents(".table").find(":checkbox").prop("checked",true);
+       	}else{
+	       	$(this).parents(".table").find(":checkbox").prop("checked",false);
+       	}
 	});
-	$(".table th .checkbox").click(function(){
-    	$(this).parents(".table").toggleClass("checked-all");
-	});
-
+	
 });
