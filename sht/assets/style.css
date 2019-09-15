@@ -27,19 +27,27 @@ button:hover{ opacity: .8;}
 .icon-blue{ color: #3A89DD;}
 .icon-green{ color: #00B894;}
 .icon-red{ color: #ED5566;}
+.icon-purple{ color: #6C5CE7;}
 
 /* form */
-.form-group{ margin-bottom: 20px;}
+.form-group.dropdown{ margin-bottom: 0;}
+.form-control{ width: auto;}
+.form-horizontal .form-group{ margin-left: inherit; margin-right: inherit;}
 
-
+/* table */
+.table-responsive{ border: none; overflow: inherit;}
+.table{}
 .table>tbody>tr>td{ vertical-align: middle; border-top-color: #DEEAF6;}
 .table>thead>tr>th{ border-bottom-color: #DEEAF6;}
 .table-striped>tbody>tr:nth-of-type(odd){ background-color: #F5F9FD;}
 .table-striped>tbody>tr:hover{ background-color: #E5EEF7;}
+.table-border-top{ border-top: 1px solid #DEEAF6;}
 
 /* checkbox & raido */
 .icheckbox,
 .iradio{ position: relative; top: -3px;}
+.iradio{ top: 6px;}
+.iradio+.iradio{ margin-left: 20px;}
 
 .icheckbox input[type="checkbox"],
 .iradio input[type=radio]{ position: relative; left: 0; top: 2px; width: 18px; height: 18px; z-index: 1; opacity: 0;}
@@ -48,7 +56,8 @@ button:hover{ opacity: .8;}
 .icheckbox input[type="checkbox"] + label,
 .iradio input[type=radio] + label{ font-weight: 400;}
 
-.icheckbox input[type="checkbox"] + label.text{ padding-left: 5px;}
+.icheckbox input[type="checkbox"] + label.text,
+.iradio input[type="radio"] + label.text{ padding-left: 5px;}
 
 .icheckbox input[type="checkbox"] + label:before,
 .icheckbox input[type="checkbox"]:checked + label:after{ position: absolute; top: -1px; left: 0; display: inline-block; content: ""; width: 18px; height: 18px; border: 1px solid #D7D7D7; border-radius: 3px; background: #fff; }
@@ -98,6 +107,10 @@ button:hover{ opacity: .8;}
 .pagination li a .icon{ font-size: 10px;}
 
 /* list */
+.list{}
+.list label{ display: inline-block; margin-right: 10px; min-width: 35%; text-align: right;}
+.list.list-row-2 li{ display: inline-block; width: 49%; white-space: nowrap;}
+
 .list-group{}
 .list-group-item{ padding: 10px; border-width: 1px 0 0 0; border-color: #DEEAF6;}
 .list-group-item .list-title{ text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
@@ -107,6 +120,12 @@ button:hover{ opacity: .8;}
 .list-file .list-group-item .list-title{ color: #666;}
 .list-file .list-group-item .btn.pull-right{ position: relative; top: -4px;}
 .list-file .list-group-item .list-title .icon{ color: #999;}
+
+/* modal-dialog */
+.modal-dialog{}
+.modal-header button .icon{ color: #91BBD3;}
+.modal-dialog .btn-group{ margin: 10px 0;}
+
 
 /* global */
 .pr{ position: relative;}
@@ -121,7 +140,7 @@ button:hover{ opacity: .8;}
 .dropdown-menu>li>a{ padding: 6px 20px;}
 .dropdown-menu>li>a:hover{ background-color: #DEEAF6;}
 .dropdown.justified .dropdown-toggle,
-.dropdown.justified .dropdown-menu{ min-width: 180px; max-width: 240px;}
+.dropdown.justified .dropdown-menu{ min-width: auto; max-width: 240px;}
 .dropdown.justified .dropdown-toggle{ position: relative; text-align: left;}
 .dropdown.justified .dropdown-toggle .caret{ position: absolute; top: 14px; right: 12px;}
 .dropdown.justified .dropdown-menu li a{ text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
@@ -129,6 +148,10 @@ button:hover{ opacity: .8;}
 
 .dropdown.justified.wider .dropdown-toggle,
 .dropdown.justified.wider .dropdown-menu{ min-width: 240px; max-width: 320px;}
+
+.dropdown.justified.narrower .dropdown-toggle,
+.dropdown.justified.narrower .dropdown-menu{ min-width: 120px; max-width: 180px;}
+
 
 .dropdown .dropdown-menu li.with-input{ padding: 6px 20px;}
 .dropdown .dropdown-menu li.with-input .form-control{ width: 100%;}
